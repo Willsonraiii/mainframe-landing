@@ -28,8 +28,9 @@ export function useTypewriter({ text, speed = 38, startDelay = 600 }: UseTypewri
     timeoutRef.current = setTimeout(() => {
       intervalRef.current = setInterval(() => {
         if (indexRef.current < text.length) {
-          setDisplayed((prev) => prev + text[indexRef.current]);
+          const char = text[indexRef.current];
           indexRef.current++;
+          setDisplayed((prev) => prev + char);
         } else {
           if (intervalRef.current) {
             clearInterval(intervalRef.current);

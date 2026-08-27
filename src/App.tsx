@@ -166,7 +166,7 @@ export default function App() {
         playsInline
         preload="auto"
         className="fixed inset-0 z-0 w-full h-full object-cover"
-        style={{ objectPosition: '70% center' }}
+        style={{ objectPosition: '70% center', backgroundColor: '#000' }}
         aria-hidden="true"
       />
 
