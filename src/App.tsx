@@ -159,16 +159,19 @@ export default function App() {
 
   return (
     <>
-      <video
-        ref={videoRef}
-        src={VIDEO_URL}
-        muted
-        playsInline
-        preload="auto"
-        className="fixed inset-0 z-0 w-full h-full object-cover"
-        style={{ objectPosition: '70% center', backgroundColor: '#000' }}
-        aria-hidden="true"
-      />
+      <div className="fixed inset-0 z-0 bg-black" aria-hidden="true">
+        <video
+          ref={videoRef}
+          src={VIDEO_URL}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: '70% center' }}
+        />
+      </div>
 
       <nav className="fixed top-0 left-0 right-0 z-10 px-5 sm:px-8 py-4 sm:py-5 flex items-center justify-between" role="navigation" aria-label="Main navigation">
         <div className="flex items-center gap-3" aria-label="Mainframe logo">
