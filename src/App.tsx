@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTypewriter } from './hooks/useTypewriter';
 
-const VIDEO_URL = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260826_041744_63efcd78-bf7d-4039-99e2-2461e8a61903.mp4';
+const VIDEO_URL = `${import.meta.env.BASE_URL}hero.mp4`;
 const SENSITIVITY = 0.8;
 const NAV_LINKS = ['Labs', 'Studio', 'Openings', 'Shop'];
 const PILL_BUTTONS = [
@@ -269,7 +269,6 @@ export default function App() {
               fontSize: 'clamp(18px, 4vw, 26px)',
               lineHeight: '1.3',
               fontWeight: 400,
-              filter: 'blur(4px)',
             }}
             aria-label="Introduction"
           >
